@@ -6,7 +6,7 @@
 //  * @param {string} name - The name of the player
 //  */
 // class CardPlayer {}; //TODO
-
+var x = 5;
 // // CREATE TWO NEW CardPlayers
 // const dealer; // TODO
 // const player; // TODO
@@ -19,7 +19,7 @@
 //  * @returns {boolean} blackJackScore.isSoft
 //  */
 // const calcPoints = (hand) => {
-//   // CREATE FUNCTION HERE
+//   // CREATE FUNCTION HEREsss
 
 // }
 
