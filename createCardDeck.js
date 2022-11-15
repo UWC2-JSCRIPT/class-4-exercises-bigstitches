@@ -12,24 +12,26 @@ const getDeck = () => {
       // for each loop, push a card object to the deck
 
       // special cases for when j > 10
-      const displayVal = ''
+      let displayVal = ''
+      //console.log('here')
 
       switch (j) {
-        case j === 1:
+        case 1:
           displayVal = 'Ace'
+          //console.log(displayVal)
           break
-        case j > 1 && j <= 10:
-          displayVal = j
-          break
-        case j === 11:
+        case 11:
           displayVal = 'Jack'
           break
-        case j === 12:
+        case 12:
           displayVal = 'Queen'
           break
-        case j === 13:
+        case 13:
           displayVal = 'King'
           break
+        default:
+          displayVal = j
+          //console.log('here')
       }
 
       const card = {
@@ -45,24 +47,27 @@ const getDeck = () => {
       deck.push(card)
     }
   }
+  return deck;
 }
 
 // CHECKS
-const deck = getDeck()
-console.log(`Deck length equals 52? ${deck.length === 52}`)
+const deck = getDeck();
+//console.log(JSON.stringify(deck));
+//console.log(deck);
+//console.log(`Deck length equals 52? ${deck.length === 52}`)
 
 const randomCard = deck[Math.floor(Math.random() * 52)]
 
 const cardHasVal =
   randomCard && randomCard.val && typeof randomCard.val === 'number'
-console.log(`Random card has val? ${cardHasVal}`)
+//console.log(`Random card has val? ${cardHasVal}`)
 
 const cardHasSuit =
   randomCard && randomCard.suit && typeof randomCard.suit === 'string'
-console.log(`Random card has suit? ${cardHasSuit}`)
+//console.log(`Random card has suit? ${cardHasSuit}`)
 
 const cardHasDisplayVal =
   randomCard &&
   randomCard.displayVal &&
   typeof randomCard.displayVal === 'string'
-console.log(`Random card has display value? ${cardHasDisplayVal}`)
+//console.log(`Random card has display value? ${cardHasDisplayVal}`)

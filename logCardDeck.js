@@ -58,4 +58,8 @@ const cards = [
  *
  * @param {array} deck A deck of cards
  */
-const logCardDeck = deck => {};
+const logCardDeck = deck => {
+  const worthTen = deck.map(card => {console.log(`${card.displayVal} of ${card.suit}, worth ${card.val}.`)});
+};
+
+logCardDeck(cards);
